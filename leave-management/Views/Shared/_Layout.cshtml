@@ -6,6 +6,13 @@
     <title>@ViewData["Title"] - Core Leave Management</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    
+
+
+
+
 </head>
 <body>
     <header>
@@ -28,10 +35,10 @@
                           <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" >Manage</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item text-dark" href="#">Leave Types</a>
-                                <a class="dropdown-item text-dark" href="#">Leave Allocations</a>
-                                <a class="dropdown-item text-dark" href="#">Leave Applications</a>
-                                <a class="dropdown-item text-dark" href="#">Employees</a>
+                                <a class="dropdown-item text-dark" asp-controller="LeaveTypes" asp-action="Index">Leave Types</a>
+                                <a class="dropdown-item text-dark" asp-controller="LeaveAllocations" asp-action="Index">Leave Allocations</a>
+                                <a class="dropdown-item text-dark" asp-controller="LeaveHistory" asp-action="Index">Leave History</a>
+                                <a class="dropdown-item text-dark" asp-controller="Employees" asp-action="Index">Employees</a>
                             </div>
                         </li>
                     </ul>
@@ -53,6 +60,9 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js" asp-append-version="true"></script>
+    
+    
     @RenderSection("Scripts", required: false)
 </body>
 </html>
