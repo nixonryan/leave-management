@@ -11,7 +11,7 @@ using System.Linq;
 
 namespace leave_management.Controllers
 {
-    [Authorize(Roles ="Administrator")]
+    [Authorize(Roles = "Administrator, Employee")]
     public class LeaveTypesController : Controller
     {
         private readonly ILeaveTypeRepository _repo;
